@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>University Recommender System</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style>
+        .navbar {
+            background-color: #670aaa;
+        }
+        .nav-brand {
+            color: white;
+            align-items: center;
+            text-align: center;
+        }
+        body {
+            background-color: black;
+            color: white; /* Set default text color to white */
+        }
+        .a {
+            color: white; /* Set link text color to white */
+        }
+        .nav-rectangle {
+            background-color: rgba(103, 10, 170, 0.3);
+            margin: 0;
+            padding: 20px; 
+            border-radius: 5px; 
+            display: flex; /* Use flexbox to align items */
+            justify-content: left; /* Center content horizontally */
+        }
+        .navbar-nav {
+            display: flex;
+        }
+        .navbar-nav > li {
+            margin: 0 10px; /* Adjust margin between list items */
+        }
+        .top {
+            color: white;
+            justify-content: left;
+        }
+        .card {
+            height: 300px; /* Set a fixed height for the cards */
+        }
+        .card img {
+            height: 100%; /* Ensure the image fills the card height */
+            object-fit: cover; /* Maintain aspect ratio and fill the card */
+        }
+        .col-md-4 {
+            background-color: white;
+            margin-bottom: 20px; /* Add margin between rows */
+        }
+        .row-2{
+            padding-top:60px;
+        }
+        .row-2 .col-md-4 {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        h3{
+            display: flex;
+            justify-content: center;
+        }
+        .row-3{
+            background-color: white;
+            padding-top:70px;
+            margin-top: 130px; /* Adjust margin-top for space between row-2 and row-3 */
+        }
+        .card-img-top-1{
+            padding-left:30px;
+        }
+        .card-img-top-2{
+            padding-left:53px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <h3 class="nav-brand">University Recommender-Bridge the foundation of your future</h3>
+    </nav>
+    <div class="nav-rectangle">
+        <ul class="nav navbar-nav">
+            <li><a class="a">Home</a></li>
+            <li><a class="a" href="{{ url_for('recommend_ui') }}">Recommend</a></li>
+            <li><a class="a">Contact</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="top">TOP 12</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="https://media.designrush.com/inspirations/129681/conversions/_1523543112_460_harvard-preview.jpg" alt="Harvard University">
+                    <h3>Harvard University</h3>
+                    <p>World Rank:1</p>
+                    <p>Score:100</p>
+                </div>
+            </div>
+                <div class="col-md-4" style="padding-left: 70px;">
+                <div class="card">
+                    <img class="card-img-top" src="https://identity.stanford.edu/wp-content/uploads/sites/3/2020/07/SU_SealColor_web3.png" alt="Stanford University">
+                    <h3>Stanford University</h3>
+                    <p>World Rank:3</p>
+                    <p>Score:95.2975</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="https://logowik.com/content/uploads/images/mit9241.jpg" alt="Massachusetts Institute of Technology">
+                    <h3>Massachusetts Institute of Technology</h3>
+                    <p>World Rank:2</p>
+                    <p>Score:94.8375</p>
+                </div>
+            </div>
+        </div>
+        <div class="row-2">
+            <div class="col-md-4" style="padding-left:56px;margin-top:70px;">
+                <div class="card">
+                    <img class="card-img-top" src="https://static.cdnlogo.com/logos/u/49/university-of-cambridge.png" alt="University of Cambridge">
+                    <h3>University of Cambridge</h3>
+                    <p>World Rank:4</p>
+                    <p>Score:92.7150</p>
+                </div>
+            </div>
+            <div class="col-md-4"style="margin-top:70px;">
+                <div class="card">
+                    <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2tkckNV4adueDipzbJWqaN2pklELEen9USmmxLMr3xg&s" alt="University of Oxford">
+                    <h3>University of Oxford</h3>
+                    <p>World Rank:7</p>
+                    <p>Score:92.2125</p>
+                </div>
+            </div>
+            <div class="col-md-4" style="padding-left:56px;margin-top:70px;">
+                <div class="card">
+                    <img class="card-img-top-2" src="https://admissions.ucr.edu/sites/default/files/styles/form_preview/public/2020-07/ucr-education-logo-columbia-university.png?itok=-0FD6Ma2" alt="Columbia University">
+                    <h3>Columbia University</h3>
+                    <p>World Rank:9</p>
+                    <p>Score:90.1550</p>
+                </div>
+            </div>
+        </div>
+    <div class="row-3">
+        <div class="col-md-4"style="margin-top:110px;">
+            <div class="card">
+                <img class="card-img-top" src="https://brand.berkeley.edu/sites/default/files/styles/panopoly_image_original/public/uc_berkeley_seal-01_0.png?itok=QpgdkHje&timestamp=1670870509" alt="University of California Berkeley">
+                <h3>Columbia University</h3>
+                <p>World Rank:10</p>
+                <p>Score:87.1775</p>
+            </div>
+        </div>
+        <div class="col-md-4" style="padding-left: 82px;margin-top:110px;">
+            <div class="card">
+                <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Princeton_seal.svg" alt="University of California Berkeley">
+                <h3>Princeton University</h3>
+                <p>World Rank:6</p>
+                <p>Score:85.6625</p>
+            </div>
+        </div>
+        <div class="col-md-4" style="padding-left: 82px;margin-top:110px;">
+            <div class="card">
+                <img class="card-img-top-1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQk_GTchdAVXvi3DnQlG7AUC2I6o6OYyPqyJtjZWG7JjQ&s" alt="University of California Berkeley">
+                <h3>University of Chicago</h3>
+                <p>World Rank:11</p>
+                <p>Score:83.9275</p>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
